@@ -14,7 +14,7 @@ from os import system, path
 from datetime import datetime, timezone
 from sys import exit, platform
 from decimal import *
-import koios_python as kp
+import koios_python
 
 try:
     import pyfiglet
@@ -45,6 +45,8 @@ local_tz = get_localzone()
 ada = " \u20B3"
 lovelaces = 1000000
 
+### Initialize Koios Python class instance ###
+kp = koios_python.URLs()
 
 ### Get Next Epoch Nonce from Koios ###
 try:
